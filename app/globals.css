@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* iOS safe area support */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 1023px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Progress bar animation */
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+}
+
+.animate-progress {
+  animation: progress-fill 0.5s ease-out;
+}
+
+/* Status colors */
+.status-met {
+  @apply bg-emerald-100 text-emerald-800 border-emerald-200;
+}
+
+.status-not-met {
+  @apply bg-red-100 text-red-800 border-red-200;
+}
+
+.status-pending {
+  @apply bg-amber-100 text-amber-800 border-amber-200;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-xl border border-slate-200 shadow-sm;
+}
+
+.card-header {
+  @apply px-4 lg:px-6 py-3 lg:py-4 border-b border-slate-100;
+}
+
+.card-body {
+  @apply px-4 lg:px-6 py-3 lg:py-4;
+}
+
+/* Table styles */
+.table-container {
+  @apply overflow-x-auto -mx-4 lg:mx-0;
+}
+
+.data-table {
+  @apply w-full text-sm;
+}
+
+.data-table th {
+  @apply px-3 lg:px-4 py-2 lg:py-3 text-left font-medium text-slate-600 bg-slate-50 border-b border-slate-200 whitespace-nowrap;
+}
+
+.data-table td {
+  @apply px-3 lg:px-4 py-2 lg:py-3 border-b border-slate-100;
+}
+
+.data-table tr:hover td {
+  @apply bg-slate-50;
+}
+
+/* Form styles */
+.form-label {
+  @apply block text-sm font-medium text-slate-700 mb-1;
+}
+
+.form-input {
+  @apply w-full px-3 py-2.5 lg:py-2 rounded-lg border border-slate-300 text-base lg:text-sm
+         focus:outline-none focus:ring-2 focus:ring-pks-500 focus:border-pks-500
+         disabled:bg-slate-100 disabled:cursor-not-allowed;
+}
+
+.form-select {
+  @apply w-full px-3 py-2.5 lg:py-2 rounded-lg border border-slate-300 text-base lg:text-sm
+         focus:outline-none focus:ring-2 focus:ring-pks-500 focus:border-pks-500
+         disabled:bg-slate-100 disabled:cursor-not-allowed;
+}
+
+/* Button styles */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2.5 lg:py-2 rounded-lg font-medium
+         transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed text-sm;
+}
+
+.btn-primary {
+  @apply btn bg-pks-600 text-white hover:bg-pks-700 focus:ring-pks-500 active:bg-pks-800;
+}
+
+.btn-secondary {
+  @apply btn bg-slate-100 text-slate-700 hover:bg-slate-200 focus:ring-slate-500 active:bg-slate-300;
+}
+
+.btn-danger {
+  @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn-ghost {
+  @apply btn bg-transparent text-slate-600 hover:bg-slate-100 focus:ring-slate-500;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-sm;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2 lg:px-2.5 py-0.5 rounded-full text-xs font-medium whitespace-nowrap;
+}
+
+.badge-success {
+  @apply badge bg-emerald-100 text-emerald-800;
+}
+
+.badge-warning {
+  @apply badge bg-amber-100 text-amber-800;
+}
+
+.badge-danger {
+  @apply badge bg-red-100 text-red-800;
+}
+
+.badge-info {
+  @apply badge bg-blue-100 text-blue-800;
+}
+
+.badge-neutral {
+  @apply badge bg-slate-100 text-slate-800;
+}
+
+/* Calendar specific styles */
+.calendar-day {
+  @apply p-1 lg:p-2 min-h-[60px] lg:min-h-[80px] border border-slate-200 rounded-lg transition-colors;
+}
+
+.calendar-day-full {
+  @apply calendar-day bg-white hover:bg-slate-50;
+}
+
+.calendar-day-half {
+  @apply calendar-day bg-amber-50 hover:bg-amber-100;
+}
+
+.calendar-day-off {
+  @apply calendar-day bg-slate-100 text-slate-400;
+}
+
+.calendar-day-weekend {
+  @apply calendar-day bg-slate-50 text-slate-400;
+}
+
+.calendar-day-holiday {
+  @apply calendar-day bg-red-50 text-red-400;
+}
+
+/* Navigation */
+.nav-link {
+  @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 
+         hover:bg-slate-100 hover:text-slate-900 transition-colors;
+}
+
+.nav-link-active {
+  @apply nav-link bg-pks-50 text-pks-700 font-medium;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply animate-spin rounded-full border-2 border-slate-200 border-t-pks-600;
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 1023px) {
+  button, a, input, select {
+    min-height: 44px;
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media (max-width: 1023px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}

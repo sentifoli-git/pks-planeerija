@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "target_pct": 0.90,
+    "buffer_pct": 0.10,
+    "invite_lead_days_min": 7,
+    "invite_lead_days_max": 10,
+    "rr_diary_days": 7,
+    "period_start": "2026-02-01",
+    "period_end": "2026-12-13",
+    "slots_per_day_full": 8,
+    "slots_per_day_half": 4,
+    "appointment_duration_min": 40,
+    "break_duration_min": 60,
+    "end_of_day_buffer_min": 40,
+    "transition_admin_min": 5,
+    "weekly_confirmation_day": "FRIDAY"
+  },
+  "holidays_2026_estonia": [
+    { "date": "2026-01-01", "name": "Uusaasta" },
+    { "date": "2026-02-24", "name": "Iseseisvuspäev" },
+    { "date": "2026-04-10", "name": "Suur Reede" },
+    { "date": "2026-04-12", "name": "Ülestõusmispühade 1. püha" },
+    { "date": "2026-05-01", "name": "Kevadpüha" },
+    { "date": "2026-05-31", "name": "Nelipühade 1. püha" },
+    { "date": "2026-06-23", "name": "Võidupüha" },
+    { "date": "2026-06-24", "name": "Jaanipäev" },
+    { "date": "2026-08-20", "name": "Taasiseseisvumispäev" },
+    { "date": "2026-12-24", "name": "Jõululaupäev" },
+    { "date": "2026-12-25", "name": "Esimene jõulupüha" },
+    { "date": "2026-12-26", "name": "Teine jõulupüha" }
+  ],
+  "units": [
+    { "code": "PELGULINN", "name": "Pelgulinn" },
+    { "code": "ULEMISTE", "name": "Ülemiste" }
+  ],
+  "lists": [
+    { "unit": "PELGULINN", "label": "dr Lill", "chronic_total": 482, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Abramov", "chronic_total": 387, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Guskova", "chronic_total": 476, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Melan", "chronic_total": 299, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Kõressaar", "chronic_total": 333, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Männik", "chronic_total": 317, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Pranstibel", "chronic_total": 279, "needs_review": false },
+    { "unit": "PELGULINN", "label": "dr Einberg", "chronic_total": 235, "needs_review": false },
+    { "unit": "ULEMISTE", "label": "dr Vessel", "chronic_total": null, "needs_review": true },
+    { "unit": "ULEMISTE", "label": "dr Gretšenko", "chronic_total": null, "needs_review": true },
+    { "unit": "ULEMISTE", "label": "dr Kolts", "chronic_total": null, "needs_review": true },
+    { "unit": "ULEMISTE", "label": "dr Lindström", "chronic_total": null, "needs_review": true }
+  ],
+  "roles": [
+    { "code": "ADMIN", "name": "Admin", "description": "Kõik õigused" },
+    { "code": "NURSING_LEAD", "name": "Õendusjuht", "description": "Kõik vaated, saab muuta nimistute krooniku arvu" },
+    { "code": "UNIT_LEAD_PELGULINN", "name": "Vastutav õde: Pelgulinn", "description": "Pelgulinna üksuse haldus" },
+    { "code": "UNIT_LEAD_ULEMISTE", "name": "Vastutav õde: Ülemiste", "description": "Ülemiste üksuse haldus" },
+    { "code": "CALL_NURSE", "name": "Kõneliini õde", "description": "Kutsete sisestamine (valib üksuse)" }
+  ]
+}
