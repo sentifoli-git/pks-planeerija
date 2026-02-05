@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 import { useState } from 'react';
 import { Users, Edit2, Save, X, AlertTriangle, CheckCircle, Calculator } from 'lucide-react';
 
