@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-import { useState } from 'react';
 import { Users, Edit2, Save, X, AlertTriangle, CheckCircle, Calculator } from 'lucide-react';
 
 type UnitCode = 'PELGULINN' | 'ULEMISTE';
